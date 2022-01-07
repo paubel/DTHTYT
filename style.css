@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  margin: 0;
+}
+
+:root {
+  --red: #ff6f69;
+  --beige: #ffeead;
+  --yellow: #ffcc5c;
+}
+
+/*Start Layout*/
+.page-container {
+  display: grid;
+  background-color: gray;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100%;
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-template-areas:
+    "h h h"
+    "c m a"
+    "f f f";
+}
+
+header {
+  background-color: yellow;
+  padding: 1rem;
+  grid-area: h;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "h1  n"
+    "h1  s";
+}
+
+header h1 {
+  background-color: green;
+  grid-area: h1;
+}
+
+header nav {
+  background-color: red;
+  grid-area: n;
+}
+
+header .search {
+  background-color: gold;
+  grid-area: s;
+}
+
+main {
+  background-color: aqua;
+  padding: 1rem;
+  grid-area: m;
+}
+
+main img {
+  max-width: 640px;
+  width: 100%;
+}
+nav.chapter-nav {
+  background-color: chocolate;
+  grid-area: c;
+  padding: 1rem;
+  width: 20vmin;
+}
+
+aside {
+  background-color: limegreen;
+  padding: 1rem;
+  grid-area: a;
+  overflow: scroll;
+}
+
+footer {
+  background-color: aquamarine;
+  padding: 1rem;
+  grid-area: f;
+}
+/*End Layout*/
+
+/*Start Small Layout*/
+
+@media screen and (max-width: 800px) {
+  .page-container {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "h h"
+      "c m"
+      "c a"
+      "f f";
+  }
+
+  header {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h1"
+      "n"
+      "s";
+  }
+}
+
+/*End Small Layout*/
+
+/*Start Fonts*/
+
+h1,
+h2,
+h3 {
+  font-family: Caveat, sans-serif;
+}
+
+body {
+  font-family: Quicksand, sans-serif;
+}
+/*End Fonts*/
